@@ -1,0 +1,19 @@
+<h2>Contact page</h2>
+
+<table class="table">
+  <tr>
+    <th>Nama</th>
+    <th>Email</th>
+  </tr>
+  <!-- mengecek apakah data kosong -->
+  <% if (contact.length === 0) { %>
+  <td colspan="2">Data Kosong</td>
+
+  <!-- jika data tidak kosong  -->
+  <% } %> <% contact.forEach(data => { %>
+  <tr>
+    <td><%= data.name %></td>
+    <td><%= data.email %></td>
+  </tr>
+  <% }) %>
+</table>
